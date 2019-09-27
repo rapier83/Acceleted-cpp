@@ -20,6 +20,7 @@ int main()
 	const string greeting = "Hello " + sometext + "!";
 
 	const int pad = 1;
+
 	const int rows = pad * 2 + 3;
 	const string::size_type cols = greeting.size() + pad * 2 + 3;
 
@@ -36,12 +37,11 @@ int main()
 			if (r == pad + 1 && c == pad + 1)
 			{
 				cout << greeting;
-				c += greeting.size(); // 여기서 루프를 끝낼 지점을 생성함 딱 한번만 실행되어야 함
+				c += greeting.size(); // greetign 만큼 칼럼 루프 건너뛰기
 			}
 			else
 			{
-				if (r == 0 || r == rows - 1 ||
-					c == 0 || c == cols - 1)
+				if (r == 0 || r == rows - 1 || c == 0 || c == cols - 1) // 맨 가장자리
 				{
 					cout << "*";
 				}

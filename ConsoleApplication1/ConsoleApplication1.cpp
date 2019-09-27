@@ -4,13 +4,18 @@
 #include <iostream>
 #include <string>
 
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
+
 int main()
 {
-	std::string input;
+	string input;
 
-	std::cout << "What's your name? " << std::endl;
-	std::cin >> input;
-	std::cout << "Hello " << input << std::endl;
+	cout << "What's your name? " << endl;
+	cin >> input;
+	cout << "Hello " << input << endl;
 
 }
 
